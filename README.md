@@ -15,6 +15,9 @@ One of the most relevant applications of machine learning for corporations globa
 
 Unfortunately, there are few tools today which provide summary statistics on textual data that a user may want to analyze. Our goal with this package is to provide users with a simple and flexible tool to gather key insights that would be useful during the exploratory data analysis phase of the data science workflow. 
 
+Our library specifically will make extensive use of pre-existing packages in the R eco-system. We will use the `textcat` and `openNLP` library to build most of the sentiment analysis functions while also leveraging well-known packages such as `tidyverse` to aid in the overall presentation of our final output results. 
+
+
 ## Installation
 
 
