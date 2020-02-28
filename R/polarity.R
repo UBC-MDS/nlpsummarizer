@@ -11,15 +11,12 @@
 #' @param df$col
 #' This method will expect dataframe's column with textual data
 #'
-#' @return
-#' nop(integer): number of positive words
-#' nong(integer): number of negative words
-#' non(integer): number of neutral words
+#' @return dataframe with one row containing columns for count of positive, negative and neutral words
 #'
 #' @examples
-#'     >>>> df = pd.DataFrame({'text': 'He is a good guy.
-#'                              This is the worst coffee I had in my life.'})
-#'    >>>> polarity(df['text'])
+#'     >>>> df = data.frame(text = c('He is a good guy.
+#'                              This is the worst coffee I had in my life.'))
+#'    >>>> polarity(df$text)
 #'    [1]  | positive words | negative words | neutral words |
 #'         |         1      |           1    |    0          |
 
