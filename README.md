@@ -37,7 +37,6 @@ devtools::install_github("..........")
 - tidyverse
 
 
-
 ## Functions
 
 
@@ -54,6 +53,28 @@ devtools::install_github("..........")
 This is a basic example which shows you how to generate a summary:
 
 ``` r
-#library(nlpsummarizer)
-## basic example code
+library(nlpsummarizer)
+df <- data.frame(text_col =  c('I love travelling to Japan and
+                           eating Mexican food but I can only speak
+                           English!'))
+
+get_language(df$text_col)
+
+[1] 'English'
+
+get_part_of_speech(df$text_col)
+
+[2]  |   verbs    | prepositions | adjectives |   nouns   |  articles  |
+     |    0.2     |     0.11     |     0.3    |    0.06   |     0.18   |
+
+get_polarity(df$text_col)
+
+[3] | positive words | negative words | neutral words |
+    |         3      |           0    |    15         |
+
+summary_4(df$text_col)
+
+[4] | number of sentences | number of stop words | high freq. words |
+    |         1           |           4          |    I(2)          |
+
 ```
