@@ -18,7 +18,7 @@ Unfortunately, there are few tools today which provide summary statistics on tex
 
 Our library specifically will make extensive use of pre-existing packages in the R eco-system. We will use the `textcat` and `openNLP` library to build most of the sentiment analysis functions while also leveraging well-known packages such as `tidyverse` to aid in the overall presentation of our final output results. 
 
-
+To the best of our knowledge, there is no any other library that combines all the below mentioned functionality in one.
 
 ## Installation
 
