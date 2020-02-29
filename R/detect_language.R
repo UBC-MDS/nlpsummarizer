@@ -11,11 +11,11 @@
 #'
 #' @examples
 #'    >>> df <- data.frame(text_col =  c('I love travelling to Japan and
-                            eating Mexican food but I can only speak
-                            English!'))
+#'                            eating Mexican food but I can only speak
+#'                            English!'))
 #'    >>>> get_part_of_speech(df$text_col)
 #'      [1]  'English'
-
-get_language <- function(df_col){
-
-}
+#'
+#'get_language <- function(df_col){
+#'
+#'}
