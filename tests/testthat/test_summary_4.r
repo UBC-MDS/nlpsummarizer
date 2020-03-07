@@ -16,9 +16,9 @@ test_that("Test that output is of type dataframe", {
   df = data.frame('text' = c('Today is a sunny day', 'We should go to a beach on this sunny day'))
   
   result = summary_4(df$text)
-  class_name = (class(result)[3])
+  class_name = (class(result))
   
-  expect_true(class_name == 'data.frame')
+  expect_equal(class_name, 'data.frame')
 })
 
 

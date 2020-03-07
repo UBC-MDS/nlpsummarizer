@@ -61,7 +61,7 @@ summary_4<- function(df_col) {
   all_messages_split = str_split(all_messages, " ")
 
   #Computes the frequency of words
-  fow = data.frame(sort(table(c(all_messages_comma)), decreasing=T)[1:3])
+  fow = data.frame(sort(table(c(all_messages_split)), decreasing=T)[1:3])
 
   #Returns a dataframe with all the desired outputs.
   return(data.frame('Number of sentences' = nos,
@@ -73,4 +73,5 @@ summary_4<- function(df_col) {
 # a = read_excel('data/text_data.xlsx')
 # a
 #
-# summary_4(a$text)
+# b = (summary_4(a$text))
+# class(b)
