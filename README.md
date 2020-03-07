@@ -35,6 +35,7 @@ devtools::install_github("UBC-MDS/nlpsummarizer)
 - textcat
 - openNLP
 - tidyverse
+- udpipe
 
 
 ## Functions
