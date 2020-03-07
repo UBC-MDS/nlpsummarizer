@@ -44,7 +44,3 @@ get_part_of_speech <- function(df_col, model_path = './data/english-ewt-ud-2.4-1
 	return(results)
 }
 
-ex <- data.frame('text_col' = c('Today is a sunny day', 'We should go to a beach on this sunny day'))
-ex <- data.frame('text_col' = c(1,2))
-print(get_part_of_speech(ex$text_col)[[1]])
-
