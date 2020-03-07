@@ -24,6 +24,10 @@ library(udpipe)
 #'           |    0.2     |     0.11     |     0.3    |    0.06   |     0.18   |
 
 get_part_of_speech <- function(df_col, model_path = './data/english-ewt-ud-2.4-190531.udpipe'){
+	if (!(class(df_col) == "character" || class(df_col) == "factor")){
+		stop('The function should get input character or factor columns of dataframe')
+	}
+
 	if (!file.exists(model_path)){
 		print('Model does not exist in ./data folder')
 		print('Downloading...')
@@ -40,6 +44,7 @@ get_part_of_speech <- function(df_col, model_path = './data/english-ewt-ud-2.4-1
 	return(results)
 }
 
-ex <- data.frame(text_col =  c('Today is a beautiful Monday'))
-print(get_part_of_speech(ex$text_col))
+ex <- data.frame('text_col' = c('Today is a sunny day', 'We should go to a beach on this sunny day'))
+ex <- data.frame('text_col' = c(1,2))
+print(get_part_of_speech(ex$text_col)[[1]])
 
