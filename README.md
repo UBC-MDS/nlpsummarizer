@@ -36,6 +36,12 @@ devtools::install_github("UBC-MDS/nlpsummarizer)
 - openNLP
 - tidyverse
 - udpipe
+- readxl
+- readr
+- stringr
+- quanteda
+- stopwords
+- tm
 
 
 ## Functions
