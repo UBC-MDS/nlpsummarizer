@@ -22,11 +22,8 @@ library(Matrix)
 #'	 adjectives, nouns and articles.
 #'
 #' @examples
-#'    >>> ex <- data.frame(text_col =  c('Today is a beautiful Monday'))
-#'    >>>> get_part_of_speech(ex$text_col)
-#'
-#'      [1]  |   ADJ    |   AUX   |   DET    |  NOUN  |   PROPN  |
-#'           |    0.2   |   0.2   |   0.2    |  0.2   |    0.2   |
+#'     ex <- data.frame(text_col =  c('Today is a beautiful Monday'))
+#'     get_part_of_speech(ex$text_col)
 
 get_part_of_speech <- function(df_col, model_path = './data/english-ewt-ud-2.4-190531.udpipe'){
 	if (!(class(df_col) == "character" || class(df_col) == "factor")){
