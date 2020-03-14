@@ -54,6 +54,7 @@ jobs:
           install.packages('stopwords')
           install.packages('tidytext')
           install.packages('tm')
+          install.packages('covr')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), "depends.Rds", version = 2)
         shell: Rscript {0}
 
