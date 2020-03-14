@@ -1,5 +1,9 @@
 ![CI](https://github.com/UBC-MDS/nlpsummarizer/workflows/CI/badge.svg)
 
+[![codecov](https://codecov.io/gh/UBC-MDS/nlpsummarizer/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/nlpsummarizer)
+
+
+
 # NLPSummmarizer
 
 <!-- badges: start -->
