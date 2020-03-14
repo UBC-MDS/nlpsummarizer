@@ -1,5 +1,8 @@
+![CI](https://github.com/UBC-MDS/nlpsummarizer/workflows/CI/badge.svg)
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+[![codecov](https://codecov.io/gh/UBC-MDS/nlpsummarizer/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/nlpsummarizer)
+
+
 
 # NLPSummmarizer
 
