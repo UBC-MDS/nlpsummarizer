@@ -1,5 +1,4 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+![CI](https://github.com/UBC-MDS/nlpsummarizer/workflows/CI/badge.svg)
 
 # NLPSummmarizer
 
