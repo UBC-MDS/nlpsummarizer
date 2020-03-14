@@ -39,6 +39,21 @@ jobs:
       - name: Query dependencies
         run: |
           install.packages('remotes')
+          install.packages('textcat')
+          install.packages('testthat')
+          install.packages('udpipe')
+          install.packages('Matrix')
+          install.packages('tokenizer')
+          install.packages('tidyverse')
+          install.packages('dplyr')
+          install.packages('readr')
+          install.packages('readxl')
+          install.packages('stringi')
+          install.packages('stringr')
+          install.packages('quanteda')
+          install.packages('stopwords')
+          install.packages('tidytext')
+          install.packages('tm')
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), "depends.Rds", version = 2)
         shell: Rscript {0}
 
