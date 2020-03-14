@@ -1,6 +1,13 @@
 # author : Karanpal Singh
 # date : 26 Feb 2020
 
+library(tidyverse)
+library(dplyr)
+library(readr)
+library(readxl)
+library(stringi)
+library(tokenizers)
+
 #' Polarity
 #'   This method will check and compute the polarity of the text data.
 #'   This method will return:
@@ -19,13 +26,6 @@
 #'    [1]  | positive words | negative words |
 #'         |         1      |           1    |
 
-library(tidyverse)
-library(dplyr)
-library(readr)
-library(readxl)
-library(stringi)
-library(tokenizers)
-
 polarity <- function(df_col){
 
 
@@ -34,11 +34,11 @@ polarity <- function(df_col){
         expr = {
 
             # loading positive lexicons
-            positive_words_df = read_csv('data/positive-words.txt', skip = 34)
+            positive_words_df = read_csv('http://ptrckprry.com/course/ssd/data/positive-words.txt', skip = 32, col_names = 'words')
             positive_words = list(positive_words_df$words)[[1]]
 
             # loading negative lexicons
-            negative_words_df = read_csv('data/negative-words.txt', skip = 34)
+            negative_words_df = read_csv('http://ptrckprry.com/course/ssd/data/negative-words.txt', skip = 33, col_names = 'words')
             negative_words = list(negative_words_df$words)[[1]]
 
         },
@@ -91,8 +91,4 @@ polarity <- function(df_col){
     tibble('positive_words' = positive_word_count, 'negative_words'=negative_word_count)
 }
 
-
-
-df = read_excel('data/text_data.xlsx')
-polarity(df$text)
 

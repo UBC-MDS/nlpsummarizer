@@ -1,7 +1,8 @@
-# author : Karlos Muradyan 
+# author : Karlos Muradyan
 # date : 26 Feb 2020
 
 library(udpipe)
+library(Matrix)
 
 #' This function generates statistics about the proportions of following
 #' parts of speech in the given column:
