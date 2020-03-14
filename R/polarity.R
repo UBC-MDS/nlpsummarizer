@@ -34,11 +34,11 @@ polarity <- function(df_col){
         expr = {
 
             # loading positive lexicons
-            positive_words_df = read_csv('data/positive-words.txt', skip = 34)
+            positive_words_df = read_csv('http://ptrckprry.com/course/ssd/data/positive-words.txt', skip = 32, col_names = 'words')
             positive_words = list(positive_words_df$words)[[1]]
 
             # loading negative lexicons
-            negative_words_df = read_csv('data/negative-words.txt', skip = 34)
+            negative_words_df = read_csv('http://ptrckprry.com/course/ssd/data/negative-words.txt', skip = 33, col_names = 'words')
             negative_words = list(negative_words_df$words)[[1]]
 
         },
