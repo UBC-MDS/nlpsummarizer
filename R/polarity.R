@@ -1,6 +1,13 @@
 # author : Karanpal Singh
 # date : 26 Feb 2020
 
+library(tidyverse)
+library(dplyr)
+library(readr)
+library(readxl)
+library(stringi)
+library(tokenizers)
+
 #' Polarity
 #'   This method will check and compute the polarity of the text data.
 #'   This method will return:
@@ -18,13 +25,6 @@
 #'    >>>> polarity(df$text)
 #'    [1]  | positive words | negative words |
 #'         |         1      |           1    |
-
-library(tidyverse)
-library(dplyr)
-library(readr)
-library(readxl)
-library(stringi)
-library(tokenizers)
 
 polarity <- function(df_col){
 
@@ -91,8 +91,4 @@ polarity <- function(df_col){
     tibble('positive_words' = positive_word_count, 'negative_words'=negative_word_count)
 }
 
-
-
-df = read_excel('data/text_data.xlsx')
-polarity(df$text)
 
