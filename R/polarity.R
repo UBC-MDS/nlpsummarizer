@@ -20,11 +20,10 @@ library(tokenizers)
 #' @return dataframe with one row containing columns for count of positive, negative and neutral words
 #'
 #' @examples
-#'     >>>> df = data.frame(text = c('He is a good guy.
+#' df = data.frame(text = c('He is a good guy.
 #'                              This is the worst coffee I had in my life.'))
-#'    >>>> polarity(df$text)
-#'    [1]  | positive words | negative words |
-#'         |         1      |           1    |
+#' polarity(df$text)
+
 
 polarity <- function(df_col){
 
