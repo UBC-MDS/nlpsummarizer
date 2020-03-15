@@ -1,4 +1,4 @@
-# author : Karanpal Singh
+s# author : Karanpal Singh
 # date : 26 Feb 2020
 
 library(tidyverse)
@@ -20,9 +20,9 @@ library(tokenizers)
 #' @return dataframe with one row containing columns for count of positive, negative and neutral words
 #'
 #' @examples
-#'     df = data.frame(text = c('He is a good guy.
+#' df = data.frame(text = c('He is a good guy.
 #'                              This is the worst coffee I had in my life.'))
-#'    polarity(df$text)
+#' polarity(df$text)
 
 
 polarity <- function(df_col){

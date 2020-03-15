@@ -28,13 +28,12 @@ library(tm)
 #'
 #'
 #' @example
-#'         ex = data.frame({'text_col' : c('Today is a beautiful Monday
+#' ex = data.frame({'text_col' : c('Today is a beautiful Monday
 #'                                                and I would love getting a
 #'                                                coffee. However, startbucks
 #'                                                is closed.')})
 #'
-#'        summary_4(ex$text_col)
-#'
+#' summary_4(ex$text_col)
 #'
 
 summary_4<- function(df_col) {
