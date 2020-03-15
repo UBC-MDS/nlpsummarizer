@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/UBC-MDS/nlpsummarizer/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/nlpsummarizer)
 
 
+![](https://github.com/UBC-MDS/nlpsummarizer/blob/sentence_detect/img/tests_passed.png)
 
 # NLPSummmarizer
 
