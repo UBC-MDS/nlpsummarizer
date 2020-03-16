@@ -1,9 +1,6 @@
 # author : Karlos Muradyan
 # date : 26 Feb 2020
 
-library(udpipe)
-library(Matrix)
-
 #' This function generates statistics about the proportions of following
 #' parts of speech in the given column:
 #'     - verbs
@@ -21,6 +18,8 @@ library(Matrix)
 #' @return data.frame with one row containing columns verbs, prepositions,
 #'	 adjectives, nouns and articles.
 #'
+#' @export
+#'
 #' @examples
 #' ex <- data.frame(text_col =  c('Today is a beautiful Monday'))
 #' get_part_of_speech(ex$text_col)
@@ -34,10 +33,10 @@ get_part_of_speech <- function(df_col, model_path = './data/english-ewt-ud-2.4-1
 	if (!file.exists(model_path)){
 		print('Model does not exist in ./data folder')
 		print('Downloading...')
-		model_path <- udpipe_download_model(language = "english", model_dir = './data')$file_model
+		model_path <- udpipe::udpipe_download_model(language = "english", model_dir = './data')$file_model
 	}
-	udmodel <- udpipe_load_model(file = model_path)
-	tagged_text <- udpipe_annotate(udmodel, df_col)
+	udmodel <- udpipe::udpipe_load_model(file = model_path)
+	tagged_text <- udpipe::udpipe_annotate(udmodel, df_col)
 	resulting_df <- as.data.frame(tagged_text)
 
 	proportions <- table(resulting_df$upos)/nrow(resulting_df)

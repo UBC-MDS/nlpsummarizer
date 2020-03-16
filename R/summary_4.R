@@ -27,6 +27,9 @@ library(tm)
 #'          hf     : number of times the high frequency word was encountered.
 #'
 #'
+#' @export
+#'
+#'
 #' @example
 #' ex = data.frame({'text_col' : c('Today is a beautiful Monday
 #'                                                and I would love getting a
@@ -42,7 +45,7 @@ summary_4<- function(df_col) {
 
     expr = {
       # concat for processing simplicity
-      all_messages = stri_paste_list(list(df_col), sep = ". ", collapse = "")
+      all_messages = tokenizers::stri_paste_list(list(df_col), sep = ". ", collapse = "")
     },
     error = function(e){
       print('Concat failed, please provide valid column of textual data')
@@ -67,9 +70,3 @@ summary_4<- function(df_col) {
 
 }
 
-
-# a = read_excel('data/text_data.xlsx')
-# a
-#
-# b = (summary_4(a$text))
-# class(b)

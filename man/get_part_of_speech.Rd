@@ -38,9 +38,6 @@ parts of speech in the given column:
     - etc.
 }
 \examples{
-   >>> ex <- data.frame(text_col =  c('Today is a beautiful Monday'))
-   >>>> get_part_of_speech(ex$text_col)
-
-     [1]  |   ADJ    |   AUX   |   DET    |  NOUN  |   PROPN  |
-          |    0.2   |   0.2   |   0.2    |  0.2   |    0.2   |
+ex <- data.frame(text_col =  c('Today is a beautiful Monday'))
+get_part_of_speech(ex$text_col)
 }
