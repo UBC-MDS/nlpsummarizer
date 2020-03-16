@@ -15,7 +15,7 @@ df <- data.frame(text_col = c('I am a happy person',
                               "J'aime manger un énorme petit déjeuner avant d'aller travailler",
                               'Hola mi nombre es Bill y me gustan los gatos'))
 
-test_that("Test that input is of type character", {
+testthat::test_that("Test that input is of type character", {
   res = detect_language(df$text)
   expect_true((class(res)) == 'character')
 })
@@ -23,7 +23,7 @@ test_that("Test that input is of type character", {
 
 #' Test for proper language detection
 
-test_that("Test that function correctly identifies the proper language", {
+testthat::test_that("Test that function correctly identifies the proper language", {
   res = detect_language(df$text)
   expect_true(res[1] == 'english')
   expect_true(res[2] == 'french')
