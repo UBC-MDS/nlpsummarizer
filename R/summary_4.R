@@ -3,11 +3,9 @@ library(dplyr)
 library(readr)
 library(readxl)
 library(stringi)
-library(stringr)
 library(quanteda)
 library(stopwords)
-library(tidytext)
-library(tm)
+
 # Author : Vignesh Chandrasekaran on
 # Date : 26-Feb-2020
 
@@ -45,7 +43,7 @@ summary_4<- function(df_col) {
 
     expr = {
       # concat for processing simplicity
-      all_messages = tokenizers::stri_paste_list(list(df_col), sep = ". ", collapse = "")
+      all_messages = stringi::stri_paste_list(list(df_col), sep = ". ", collapse = "")
     },
     error = function(e){
       print('Concat failed, please provide valid column of textual data')
@@ -53,13 +51,13 @@ summary_4<- function(df_col) {
   )
 
   #Computes the number of sentences.
-  nos = nsentence(all_messages)
+  nos = quanteda::nsentence(all_messages)
 
   #Computes the number of words in text.
-  stop_count = sum(stringr::str_detect(tolower(all_messages), stopwords()))
+  stop_count = sum(stringr::str_detect(tolower(all_messages), stopwords::stopwords()))
 
   #Splits the passage into a vector of words.
-  all_messages_split = str_split(all_messages, " ")
+  all_messages_split = stringr::str_split(all_messages, " ")
 
   #Computes the frequency of words
   fow = data.frame(sort(table(c(all_messages_split)), decreasing=T)[1:3])
