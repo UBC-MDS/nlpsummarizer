@@ -1,12 +1,6 @@
 # author : Karanpal Singh
 # date : 26 Feb 2020
 
-library(tidyverse)
-library(dplyr)
-library(readr)
-library(readxl)
-library(stringi)
-library(tokenizers)
 
 #' Polarity
 #'   This method will check and compute the polarity of the text data.
@@ -14,7 +8,7 @@ library(tokenizers)
 #'   - Number of Positive words
 #'   - Number of Negative words
 #'
-#' @param df$col
+#' @param df_col
 #' This method will expect dataframe's column with textual data
 #'
 #' @return dataframe with one row containing columns for count of positive, negative and neutral words
@@ -52,7 +46,7 @@ polarity <- function(df_col){
 
         expr = {
             # concat for processing simplicity
-            all_messages = stringi::stri_paste_list(list(df$text), sep = ", ", collapse = "")
+            all_messages = stringi::stri_paste_list(list(df_col), sep = ", ", collapse = "")
         },
         error = function(e){
             print('Concat failed, please provide valid column of textual data')

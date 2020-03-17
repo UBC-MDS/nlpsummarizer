@@ -19,7 +19,7 @@ get_part_of_speech(
 \arguments{
 \item{df_col}{a list of values in data.frame column with textual data}
 
-\item{model_dir}{a string containing the path to the pretrained POS model.
+\item{model_path}{a string containing the path to the pretrained POS model.
      if provided, the function will look at it there, otherwise, the default place
 is considered to be data/ folder. If the model doesn't exist, it will be downloaded.}
 }

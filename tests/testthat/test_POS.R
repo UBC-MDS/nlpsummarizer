@@ -2,8 +2,6 @@
 # author: Karlos Muradyan
 # date: Mar 6, 2020
 
-library(testthat)
-
 context('get_part_of_speech')
 
 #' This script tests the results of the polarity function.

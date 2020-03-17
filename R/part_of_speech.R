@@ -11,7 +11,7 @@
 #'     - etc.
 #'
 #' @param df_col a list of values in data.frame column with textual data
-#' @param model_dir a string containing the path to the pretrained POS model.
+#' @param model_path a string containing the path to the pretrained POS model.
 #'             if provided, the function will look at it there, otherwise, the default place
 #'	       is considered to be data/ folder. If the model doesn't exist, it will be downloaded.
 #'

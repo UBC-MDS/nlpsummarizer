@@ -1,5 +1,5 @@
 Package: nlpsummarizer
-Title: What the Package Does (One Line, Title Case)
+Title: nlpsummarizer - Finds Summary of Text data
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Karanpal",
@@ -31,11 +31,12 @@ Imports:
     textcat,
     udpipe,
     dplyr,
-    readxl,
     stringr,
     stringi,
     tokenizers,
     quanteda,
     stopwords,
     tidytext,
-    tm
+    tm,
+    readr,
+    testthat

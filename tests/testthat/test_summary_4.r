@@ -2,8 +2,6 @@
 # author: Vignesh Chandrasekaran
 # date: Mar 6, 2020
 
-library(testthat)
-
 context('summary_4')
 
 #' This script will test the results of the summary_4 function.

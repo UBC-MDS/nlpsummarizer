@@ -1,11 +1,3 @@
-library(tidyverse)
-library(dplyr)
-library(readr)
-library(readxl)
-library(stringi)
-library(quanteda)
-library(stopwords)
-
 # Author : Vignesh Chandrasekaran on
 # Date : 26-Feb-2020
 

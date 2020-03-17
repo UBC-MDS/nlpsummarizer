@@ -2,8 +2,6 @@
 # author: Karanpal Singh
 # date: Mar 6, 2020
 
-library(testthat)
-
 context('Polarity')
 
 #' This script will test the results of the polarity function.
