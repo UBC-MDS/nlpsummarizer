@@ -27,3 +27,24 @@ testthat::test_that("Test the correctness of the output", {
 })
 
 
+#' Test for perfection
+testthat::test_that("Test that output is of type dataframe", {
+  df = data.frame('text' = c('Today is a sunny day', 'We should go to a beach on this sunny day'))
+
+  res = get_part_of_speech(df$text)
+  a = res[1,1]
+  b = res[1,2]
+
+  expect_true((a == 0.13333333) & (b == 0.13333333))
+})
+
+#' Test for perfection
+testthat::test_that("Test that output is of type dataframe", {
+  df = data.frame('text' = c('Today is a sunny day', 'We should go to a beach on this sunny day'))
+
+  res = get_part_of_speech(df$text)
+  a = res[1,6]
+  b = res[1,7]
+
+  expect_true((a == 0.06666667) & (b == 0.06666667))
+})
