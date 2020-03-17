@@ -30,4 +30,24 @@ testthat::test_that("Test that output should be positive", {
   expect_true((a >= 0) & (b >=0))
 })
 
+#' Test for perfection
+testthat::test_that("Test that output should be 2", {
+  df = data.frame('text' = c('I am happy. I am good'))
 
+  res = polarity(df$text)
+  a = res[1,1]
+  b = res[1,2]
+
+  expect_true((a == 2) & (b ==0))
+})
+
+#' Test for perfection
+testthat::test_that("Test that output should be 2", {
+  df = data.frame('text' = c('I am sad I am bad'))
+
+  res = polarity(df$text)
+  a = res[1,1]
+  b = res[1,2]
+
+  expect_true((a == 0) & (b ==2))
+})
