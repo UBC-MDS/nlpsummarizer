@@ -11,7 +11,7 @@
 polarity(df_col)
 }
 \arguments{
-\item{df$col}{This method will expect dataframe's column with textual data}
+\item{df_col}{This method will expect dataframe's column with textual data}
 }
 \value{
 dataframe with one row containing columns for count of positive, negative and neutral words
@@ -24,9 +24,6 @@ Polarity
   - Number of Negative words
 }
 \examples{
-    >>>> df = data.frame(text = c('He is a good guy.
-                             This is the worst coffee I had in my life.'))
-   >>>> polarity(df$text)
-   [1]  | positive words | negative words |
-        |         1      |           1    |
+df = data.frame(text = c('He is a good guy.This is the worst coffee I had in my life.'))
+polarity(df$text)
 }
