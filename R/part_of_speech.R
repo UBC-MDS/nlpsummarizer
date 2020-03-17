@@ -30,9 +30,8 @@ get_part_of_speech <- function(df_col, model_path = './data/english-ewt-ud-2.4-1
 		stop('The function should get input character or factor columns of dataframe')
 	}
 
+	print('If pre-trained model does not exist, it will be downloaded and put in ./data/ folder')
 	if (!file.exists(model_path)){
-		print('Model does not exist in ./data folder')
-		print('Downloading...')
 		model_path <- udpipe::udpipe_download_model(language = "english", model_dir = './data')$file_model
 	}
 	udmodel <- udpipe::udpipe_load_model(file = model_path)
