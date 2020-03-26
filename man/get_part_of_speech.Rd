@@ -11,10 +11,8 @@ parts of speech in the given column:
     - articles
     - etc.}
 \usage{
-get_part_of_speech(
-  df_col,
-  model_path = "./data/english-ewt-ud-2.4-190531.udpipe"
-)
+get_part_of_speech(df_col,
+  model_path = "./data/english-ewt-ud-2.4-190531.udpipe")
 }
 \arguments{
 \item{df_col}{a list of values in data.frame column with textual data}

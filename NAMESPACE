@@ -3,4 +3,4 @@
 export(detect_language)
 export(get_part_of_speech)
 export(polarity)
-export(summary_4)
+export(sentence_stopword)
