@@ -83,9 +83,9 @@ get_polarity(df$text_col)
 [3] | positive words | negative words | neutral words |
     |         3      |           0    |    15         |
 
-summary_4(df$text_col)
+stopword_sentence(df$text_col)
 
-[4] | number of sentences | number of stop words | high freq. words |
-    |         1           |           4          |    I(2)          |
+[4] | number of sentences | number of stop words |
+    |         1           |           4          |
 
 ```
