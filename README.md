@@ -3,6 +3,9 @@
 [![codecov](https://codecov.io/gh/UBC-MDS/nlpsummarizer/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/nlpsummarizer)
 
 
+<html>
+<img src = 'img/tests_passed.png'/>
+</html>
 
 # NLPSummmarizer
 
