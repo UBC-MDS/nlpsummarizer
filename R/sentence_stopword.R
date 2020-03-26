@@ -4,8 +4,6 @@
 #' This function generates the following:
 #'          - number of sentences,
 #'          - number of stop words
-#'          - list of high frequency
-#'          - frequency of the words
 #'       when a column of a dataframe or tibble is passed in.
 #'
 #' @param df_col (array): send in a column of the data.frame/tibble
@@ -26,10 +24,10 @@
 #'                                                coffee. However, startbucks
 #'                                                is closed.')})
 #'
-#' summary_4(ex$text_col)
+#' sentence_stopword(ex$text_col)
 #'
 
-summary_4<- function(df_col) {
+sentence_stopword<- function(df_col) {
 
   tryCatch(
 
