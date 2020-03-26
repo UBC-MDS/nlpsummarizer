@@ -1,14 +1,25 @@
 Package: nlpsummarizer
-Title: What the Package Does (One Line, Title Case)
+Title: nlpsummarizer - Finds Summary of Text data
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    c(person(given = "Karanpal",
+           family = "Singh",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "karanpal.singh@alumni.ubc.ca"),
+    person(given = "Karlos",
+           family = "Muradyan",
+           role = c("aut"),
+           email = "carlosmuradyan2@gmail.com"), 
+    person(given = "Sam",
+           family = "Chepal",
+           role = c("aut"),
+           email = "c.samneet@gmail.com"),            
+    person(given = "Vignesh",
+           family = "Chandrasekaran",
+           role = c("aut"),
+           email = "vignesh.chandrasekaran.100@gmail.com"))
+Description: Unfortunately, there are few tools today which provide summary statistics on textual data that a user may want to analyze. Our goal with this package is to provide users with a simple and flexible tool to gather key insights that would be useful during the exploratory data analysis phase of the data science workflow.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
@@ -16,3 +27,16 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    textcat,
+    udpipe,
+    dplyr,
+    stringr,
+    stringi,
+    tokenizers,
+    quanteda,
+    stopwords,
+    tidytext,
+    tm,
+    readr,
+    testthat

@@ -3,9 +3,7 @@
 [![codecov](https://codecov.io/gh/UBC-MDS/nlpsummarizer/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/nlpsummarizer)
 
 
-<html>
-<img src = 'img/tests_passed.png'/>
-</html>
+![](https://github.com/UBC-MDS/nlpsummarizer/blob/sentence_detect/img/tests_passed.png)
 
 # NLPSummmarizer
 
@@ -33,7 +31,7 @@ And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 install.packages("devtools")
-devtools::install_github("UBC-MDS/nlpsummarizer)
+devtools::install_github("UBC-MDS/nlpsummarizer")
 ```
 
 ### Dependencies
@@ -85,9 +83,9 @@ get_polarity(df$text_col)
 [3] | positive words | negative words | neutral words |
     |         3      |           0    |    15         |
 
-summary_4(df$text_col)
+stopword_sentence(df$text_col)
 
-[4] | number of sentences | number of stop words | high freq. words |
-    |         1           |           4          |    I(2)          |
+[4] | number of sentences | number of stop words |
+    |         1           |           4          |
 
 ```

@@ -18,9 +18,6 @@ This function will search through the Pandas DataFrame column of
 textual data to detect the language of the corpus.
 }
 \examples{
-   >>> df <- data.frame(text_col =  c('I love travelling to Japan and
-                           eating Mexican food but I can only speak
-                           English!'))
-   >>>> detect_language(df$text_col)
-     [1]  'english'
+df = data.frame(text = c('He is a good guy.This is the worst coffee I had in my life.'))
+detect_language(df$text_col)
 }

@@ -1,7 +1,6 @@
 # author : Samneet Chepal
 # date : 26 Feb 2020
 
-library(textcat)
 
 #' This function will search through the Pandas DataFrame column of
 #' textual data to detect the language of the corpus.
@@ -10,18 +9,14 @@ library(textcat)
 #'
 #' @return string the type of language present in the corpus
 #'
+#' @export
+#'
 #' @examples
-#'df <- data.frame(text_col =  c('I love travelling to Japan and eating Mexican food but I can only speak English!'))
-#'detect_language(df$text_col)
-
-
+#' df = data.frame(text = c('He is a good guy.This is the worst coffee I had in my life.'))
+#' detect_language(df$text_col)
 
 detect_language <- function(df_col) {
-                   textcat(df_col)}
 
+  textcat::textcat(df_col)
+  }
 
- df <- data.frame(text_col =  c('I love travelling to Japan and
-                             eating Mexican food but I can only speak
-                           English!'))
-
-detect_language(df$text_col)
